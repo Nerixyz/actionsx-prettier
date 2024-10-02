@@ -1,8 +1,8 @@
-export const id = 458;
-export const ids = [458];
+export const id = 622;
+export const ids = [622];
 export const modules = {
 
-/***/ 3458:
+/***/ 622:
 /***/ ((module) => {
 
 module.exports = eval("require")("benchmark");
