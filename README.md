@@ -15,8 +15,8 @@ or any dependency in advance.
 ## Usage
 
 ```yml
-- uses: actions/checkout@v2 # Check out the repository first.
-- uses: actionsx/prettier@v2
+- uses: actions/checkout@v4 # Check out the repository first.
+- uses: Nerixyz/actionsx-prettier@v3-adj
   with:
     # prettier CLI arguments.
     args: --check .
