@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [master]
+    branches: [master, nerix-adjustments]
   pull_request:
-    branches: [master]
+    branches: [master, nerix-adjustments]
 
 env:
   NODE_VERSION: 20
