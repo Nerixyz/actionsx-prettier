@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "ncc build index.js",
+    "build": "ncc build index.js --target es2020",
     "check": "prettier --check .",
     "format": "prettier --write ."
   },

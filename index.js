@@ -1,19 +1,23 @@
 import * as core from "@actions/core";
 import { parse } from "shell-quote";
 // bin/prettier can't be used, because ncc can't resolve dependencies
-import { run as runPrettier } from "prettier/internal/cli.mjs";
+// the new experimental CLI can't be used because it doesn't export a "run" equivalent
+import { run as runPrettierLegacy } from "prettier/internal/legacy-cli.mjs";
 
-function run() {
+async function run() {
   const args = core.getInput("args");
   if (typeof args !== "string") {
     throw new Error("args must be a string.");
   }
 
-  runPrettier(parse(args));
+  await runPrettierLegacy(parse(args));
 }
 
-try {
-  run();
-} catch (err) {
-  core.setFailed(err.message);
+async function main() {
+  try {
+    await run();
+  } catch (err) {
+    core.setFailed(err.message);
+  }
 }
+main();
