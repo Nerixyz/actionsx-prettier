@@ -3,16 +3,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "ncc build index.js --target es2020",
+    "build": "ncc build index.js --target es2020 --minify",
     "check": "prettier --check .",
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@actions/core": "^1.11.1",
-    "prettier": "^3.6.2",
-    "shell-quote": "^1.8.3"
+    "@actions/core": "^3.0.1",
+    "prettier": "^3.9.5",
+    "shell-quote": "^1.10.0"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.38.3"
+    "@vercel/ncc": "^0.44.1"
   }
 }
